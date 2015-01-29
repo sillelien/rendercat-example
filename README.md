@@ -34,6 +34,7 @@ The HTML used to display a couple of examples is therefore
 ```html
 <body>
 <img src="/api/0.1/render/render?url=http://google.com"/>
+<img src="/api/0.1/render/render?url=http://time.is"/>
 <img src="/api/0.1/render/render?url=http://mashable.com"/>
 </body>
 ```
