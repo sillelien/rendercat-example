@@ -1,0 +1,164 @@
+/*
+ * Copyright 2013-2015 Neil Ellis & Eric Grodt
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+html,
+body {
+    background: url("../img/cream_dust.png") repeat scroll 0 0 #FFF;
+}
+
+.example-url {
+    font-style: normal;
+    font-variant: normal;
+    text-transform: none;
+    font-family: Helvetica, "Helvetica Neue Light", sans-serif;
+}
+
+.icon-featured {
+    background-color: #4eb25c;
+}
+
+.thumb-info-inner {
+    text-transform: none;
+}
+
+#url-clip-button.zeroclipboard-is-hover {  color:#333;text-decoration:none;background-position:0 -15px;-webkit-transition:background-position .1s linear;-moz-transition:background-position .1s linear;-o-transition:background-position .1s linear;transition:background-position .1s linear}
+#url-clip-button.zeroclipboard-is-active { color: #4eb27d; }
+
+.url-error {
+    font-size: .7em;
+    color: #684B19;
+    margin-bottom: 0;
+}
+ul.plans-submenu {
+    margin: 0 !important;
+}
+ul.plans-submenu li{
+    border: 0;
+    padding: 3px;
+    line-height: 125%;
+    /*text-align: left;*/
+    /*list-style: disc inside;*/
+    /*line-height: 1em;*/
+}
+ul.plans-small-text li{
+    font-size: 92%;
+}
+
+.beta-ribbon {
+    z-index: 100000;
+    background-color:#2682D5;
+    overflow: hidden;
+    white-space: nowrap;
+    position: fixed;
+    left: -50px;
+    top: 15px;
+    box-shadow: 0px 0px 1px #2682D5;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    border: 5px double white;
+    color: #fff;
+    opacity:0.95;
+    display: block;
+    font: bold 100% 'Open Sans', Helvetica, Arial, sans-serif;
+    margin: 1px 0;
+    padding: 5px 63px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.hidden-initially {
+    opacity: 1;
+    /*display: none;*/
+}
+
+div.proudly-do {
+    margin: 0 auto;
+    /*margin-top:10px;*/
+    margin-bottom: 15px;
+    width: 180px;
+    min-width: 180px;
+    min-height: 47px;
+    background-image: url(../img/digitalocean-produdly-hosted-grey.png);
+}
+
+div.proudly-do:hover {
+    background-image: url(../img/digitalocean-produdly-hosted.png);
+}
+.btn-snap {
+    padding: 10px 15px;
+    font-size: 16px !important;
+    line-height: normal;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+}
+/*.btn-group>.btn-snap+.dropdown-toggle {*/
+    /*padding-left:12px;*/
+    /*padding-right:12px;*/
+    /*padding-top:11px;*/
+    /*padding-bottom:11px*/
+/*}*/
+
+
+body {
+    /*background: #2C2C2C;*/
+    background: #f4f6f7 url(../img/cream_dust.png);
+}
+
+h2 {
+    color: white;
+}
+
+.main {
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0px;
+    bottom: 0px;
+}
+
+.card {
+    text-align: center;
+    margin: 5px;
+}
+
+.card img {
+    border: 1px solid #f8f8f8;
+    width: 100%;
+    height: 100%;
+
+}
+
+.heading {
+    padding-top: 48px;
+    line-height: 64px;
+    color: white;
+    font-size: 48px;
+}
+
+div.card-container {
+    float: left;
+    margin-right: 8px;
+    margin-bottom: 8px;
+
+}
+
+
+

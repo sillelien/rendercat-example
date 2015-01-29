@@ -1,0 +1,285 @@
+﻿<!DOCTYPE html>
+
+<!--
+  ~ Copyright 2013-2015 Neil Ellis & Eric Grodt
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<!--[if IE 8]>
+<html class="ie ie8"> <![endif]-->
+<!--[if IE 9]>
+<html class="ie ie9"> <![endif]-->
+<!--[if gt IE 9]><!-->
+<html>
+<!--<![endif]-->
+
+<head>
+
+    <!-- Basic -->
+    <meta charset="utf-8">
+    <title>Rendercat Snapshot Example</title>
+    <meta name="keywords"
+          content="Rendercat website webpage snapshot grab capture snapshots fullpage API OSS free URL webshot thumbnail screenshot tool"/>
+    <meta name="description" content="Rendercat, for all your website capture needs.">
+    <meta name="author" content="Neil Ellis">
+
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        @font-face {
+            font-family: 'Shadows Into Light';
+            src: url('font/ShadowsIntoLight.ttf');
+        }
+    </style>
+
+    <!-- Libs CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootswatch/3.3.1/flatly/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-select.css">
+    <link rel="stylesheet" href="css/fonts/font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" href="css/custom.css">
+
+    <!-- Favicons -->
+    <link rel="shortcut icon" href="48by48.ico">
+    <link rel="apple-touch-icon" href="img/logo/Icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="img/logo/Icon-72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="img/logo/Icon@2x.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="img/logo/Icon-72@2x.png">
+
+
+    <script src="js/modernizr.js"></script>
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery.cookie.js"></script>
+    <script src="js/URI.js"></script>
+    <script src="js/flipCard.js"></script>
+
+
+    <!--[if IE]>
+    <link rel="stylesheet" href="css/ie.css">
+    <![endif]-->
+
+    <!--[if lte IE 8]>
+    <script src="js/respond.js"></script>
+    <![endif]-->
+
+    <meta property="og:title" content="Rendercat Snapshot"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:url" content="http://github.com/neilellis/rendercat-snapshot"/>
+    <meta property="og:image" content="./img/logo/Icon.png"/>
+    <meta property="og:site_name" content="Rendercat Snapshot"/>
+    <meta property="fb:app_id" content=""/>
+    <meta property="og:description"
+          content="Rendercat, the open-source rendering engine for all your website capture needs."/>
+</head>
+<body>
+
+<div class="beta-ribbon">Beta</div>
+
+<div id="learn-more" style="">
+    <br/>
+    <a href="http://github.com/neilellis/rendercat-snapshot"
+       style="position: relative;font-size: 125%">
+        <i class="icon-info-sign" style="font-size:200%;opacity:0.5;color:#2682D5"></i>
+        <!--<em>Learn More</em>-->
+    </a>
+</div>
+
+
+<div id="snap-box"
+     style='display:none;width:420px;height:420px;position: absolute; z-index:10; background: rgba(254,255,254,0.985) url(img/speckled-texture.png);box-shadow: 3px 3px 20px 3px rgba(0,0,0,0.2);border-radius: 10000px;border: 0px solid #c7ebc7'>
+    <div style=''>
+        <form id="snap-form" class="form-inline" action="#">
+            <div id="snap-box-inner"
+                 style='width:320px;height:340px;position: absolute;top:40px;left:50px;border:0px solid red'>
+                <div class="container" style="width:100%">
+                    <div class="row-fluid" style="text-align: center;">
+                        <div class="span" style="width:100%; margin-left:0px;border:0px blue solid">
+                            <a href="http://github.com/neilellis/rendercat"><img src="./img/logo/Icon-76@2x.png"/></a>
+                        </div>
+                    </div>
+                    <div class="row-fluid" style="text-align: center;">
+                        <div class="span" style="width:100%; margin-left:0px;;margin-top:-10px;border:0px blue solid">
+                            <a href="http://github.com/neilellis/rendercat"><h2
+                                    style="margin-top:1em;color: #171717;font-size:200%">Rendercat Snapshot</h2></a>
+                        </div>
+                    </div>
+                    <div class="row-fluid">
+                        <div style="width:100%;height:1em"></div>
+                    </div>
+
+
+                    <div id="snap-input-area" class="row" style="text-align: center">
+                        <!--<input type="text"-->
+                        <!--style='margin-right:0em;padding:0.4em;padding-left:0.5em;padding-right:0.25em'-->
+                        <!--name="url" id="snap-url" placeholder=" example.com">-->
+                        <div class="col-md-4"></div>
+                        <div class="col-md-4">
+                            <div class="input-group input-group">
+                                <input type="text"
+                                       style='border:0px solid #1766AF; padding-left: 0.5em;min-width:20em;max-width:600px; margin-right:0; padding-right: 25px'
+                                       class="form-control"
+                                       name="url" id="snap-url" value="http://">
+                                <a id='clear-text'
+                                   style='display: none; cursor:pointer;color:#888;margin-top: 3px;margin-right: 11px;margin-left: -5em;margin-bottom: 0px;'><i
+                                        class='icon-remove'></i></a>
+
+
+                               <span class="input-group-btn">
+
+                                <button id="snap-button" class="btn btn-info btn-snap"
+                                        style="margin-left: 0em;margin-right: 1em">Snap
+                                </button>
+                                    <button id="snap-extras" type="button"
+                                            class="btn btn-snap"
+                                            data-toggle="button">
+                                        <i class="icon-cog large"></i>
+                                    </button>
+                                    <button id="camera-sound-toggle" type="button"
+                                            style="margin-left:0em; width: 2.9em" class="btn btn-snap active"
+                                            data-toggle="button"
+                                            >
+                                        <i class="icon-volume-up large"></i>
+                                    </button>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="col-md-4"></div>
+                        <!--<span>test</span>-->
+                    </div>
+                    <div id="snap-error" class="row-fluid" style="display: none">
+                        <div style="width:100%;height:2.5em"></div>
+                        <div class="alert alert-block"
+                             style="padding:1em; margin:1em auto; margin-top: 0;width:40%">
+                            <!--<button type="button" class="close" data-dismiss="alert">&times;</button>-->
+                            <div id="snap-error-container">
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="row-fluid">
+                        <div style="width:100%;height:2em"></div>
+                    </div>
+                    <div class="row-fluid" style="text-align: center;width:100%">
+                        <div class="span" style="width:100%; border: 0px solid purple">
+                            <p style="color:#222; font-size:190%; line-height: 100% ">
+                                Built on, <em style="color:#2682D5">Rendercat</em> an open source rendering engine.
+                            </p>
+
+
+                        </div>
+                    </div>
+                    <div id="snap-extra" class="row" style="display:none;margin-top:2em;opacity:0;width:100%;">
+                        <div>
+                            <!--<div class="row-fluid">-->
+                            <!--<div style="width:100%;height:2em"></div>-->
+                            <!--</div>-->
+                            <div class="row-fluid" id="snap-options">
+                                <div class="col-lg-2"></div>
+
+                                <div id=advanced-options class="col-lg-8" style="display:none;margin-bottom:40px">
+                                    <div class="row" style="text-align: center">
+                                        <div class="input-group">
+                                            <select id="screen" class="selectpicker" data-width="100px">
+                                                <option value="desktop">Desktop</option>
+                                                <option value="tablet">Tablet</option>
+                                                <option value="mobile">Mobile</option>
+                                                <!--<option id="size-tc" value="tc">Thumbnail Cropped</option>-->
+                                            </select>
+                                            &nbsp;
+                                            <select id="size" class="selectpicker" data-width="140px">
+                                                <option value="full">Full Length</option>
+                                                <option value="lc">Large Cropped</option>
+                                                <option value="mc">Medium Cropped</option>
+                                                <option value="sc">Small Cropped</option>
+                                                <option value="th">Thumbnail</option>
+                                                <!--<option id="size-tc" value="tc">Thumbnail Cropped</option>-->
+                                            </select>
+                                            &nbsp;
+                                            <select id="delay" class="selectpicker" data-width="140px">
+                                                <option value="0">No Delay</option>
+                                                <option value="1" selected>1s Delay</option>
+                                                <option value="5">5s Delay</option>
+                                                <option value="10">10s Delay</option>
+                                                <option value="25">25s Delay</option>
+                                            </select>
+                                            &nbsp;
+                                            <div id="type" class="btn-group" data-toggle="buttons-radio">
+                                                <button type="button" class="btn btn-primary">JPG</button>
+                                                <button type="button" class="btn btn-primary  active">PNG
+                                                </button>
+                                                <button type="button" class="btn btn-primary">GIF</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-2"></div>
+
+                    </div>
+                    <p id="wait-message"
+                       style="display:none; margin-top:20px; margin-left: auto; margin-right: auto; min-height: 65px; line-height: 1em; font-family:'Shadows Into Light', serif; font-size: 190%; text-align: center; width: 70%; opacity: 0.8">
+                        <em>Give it a moment to take your snapshot...</em></p>
+
+                    <div id="snap-result" class="row-fluid" style="">
+                        <div class="" style="text-align: center;width:100%">
+                            <div id="snap-result-surround" style="display: none; margin-top: 10px">
+
+                                <div id="" style="margin: 1em 1em 2.5em 1em;">
+
+                                    <img id="snap-result-image"
+                                         style="box-shadow:4px 4px 20px 5px rgba(0,0,0,0.3)"
+                                         src=""/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row" style="margin-top:2em;">
+                <a id="digital-ocean-index"
+                   href="https://www.digitalocean.com/?refcode=7b4639fc8194"
+                   style="padding-bottom: 30px; font-size: 12px; color: #3398DA">
+                    <div class="proudly-do"></div>
+                </a>
+            </div>
+    </form>
+</div>
+</div>
+
+
+<audio id="camera-sound" preload="auto">
+    <source src="audio/camera-shutter-click.ogg" type="audio/ogg">
+    <source src="audio/camera-shutter-click.mp3" type="audio/mpeg">
+</audio>
+
+
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+<script src="js/jquery.validate.js"></script>
+<script src="js/jquery.input-clear.js"></script>
+<script src="js/spin.js"></script>
+<script type="text/javascript" src="js/ZeroClipboard.min.js"></script>
+<script type="text/javascript" src="js/bootstrap-select.js"></script>
+
+<script src="js/custom.js"></script>
+
+<script>
+    $(document).ready(function () {
+        $('.selectpicker').selectpicker();
+    });
+</script>
+
+</body>
+</html>
