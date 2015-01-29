@@ -1,9 +1,9 @@
 Rendercat Simple Example
 ========================
 
-An example of using http://github.com/neilellis/rendercat - in this example we build a very, very simple snapshot service.
+An example of using http://github.com/neilellis/rendercat - in this example we build a very, very simple snapshot example.
 
-Run this yourself locally using:
+To try it out just visit http://rendercat-example-1.neilellis.cont.tutum.io/ . Or run it yourself locally using:
 
 ```bash
 docker run -t -i -p 8080:80  neilellis/rendercat-example
