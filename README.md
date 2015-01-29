@@ -29,13 +29,11 @@ exports.render = render;
 This renders the website at 'url' query parameter then redirects to the location of the rendered image.
 
 
-The HTML used to display a couple of examples is therefore
+The HTML used to display the examples is therefore:
 
 ```html
 <body>
-<img src="/api/0.1/render/render?url=http://google.com"/>
 <img src="/api/0.1/render/render?url=http://time.is"/>
-<img src="/api/0.1/render/render?url=http://mashable.com"/>
 </body>
 ```
 
