@@ -33,7 +33,7 @@ The HTML used to display the examples is therefore:
 
 ```html
 <body>
-<img src="/api/0.1/render/render?url=http://time.is"/>
+<img src="/api/0.1/render/render?url=http://google.com"/>
 </body>
 ```
 
