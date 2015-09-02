@@ -6,12 +6,12 @@ An example of using http://github.com/neilellis/rendercat - in this example we b
 To try it out just visit http://rendercat-example-1.neilellis.cont.tutum.io/ . Or run it yourself locally using:
 
 ```bash
-docker run -t -i -p 8080:80  neilellis/rendercat-example
+docker run -t -i -p 8080:80  sillelien/rendercat-example
 ```
 
 Then just browse to http://localhost:8080 (or the ip address of the docker VM if you are using Boot2Docker).
 
-The docker image is at: https://registry.hub.docker.com/u/neilellis/rendercat-example/
+The docker image is at: https://registry.hub.docker.com/u/sillelien/rendercat-example/
 
 
 The code is basically just
