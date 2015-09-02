@@ -1,0 +1,5 @@
+rendercat:
+  image: sillelien/rendercat-example
+  ports:
+    - 8080:8080
+    
